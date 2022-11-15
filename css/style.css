@@ -1,0 +1,368 @@
+/* global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --mainColor: #343434;
+    --secondaryColor: #748182;
+    --bg-section-color: #f7f7f7;
+}
+
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    color: var(--mainColor);
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    color: #999;
+}
+
+.btn-dark {
+    transition: all 1s;
+    font-size: inherit;
+}
+
+.btn-dark:hover {
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--mainColor);
+}
+
+.border-dark {
+    transition: all 1s;
+    font-size: inherit;
+
+}
+
+.border-dark:hover {
+    background-color: #212529;
+    color: white;
+}
+
+.bg-custom {
+    background-color: var(--bg-section-color);
+}
+
+.icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    transition: all 0.5s;
+}
+
+/* home section start */
+.home {
+    background-image: url(../img/bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.home-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.home-content .icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: transparent !important;
+}
+
+h1 .typing::after {
+    content: "";
+    animation: typing;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+    0% {
+        content: "Larry|"
+    }
+
+    10% {
+        content: "Larry Daniels.|"
+    }
+
+    20% {
+        content: "|"
+    }
+
+    30% {
+        content: "Desi"
+    }
+
+    40% {
+        content: "Designer.|"
+    }
+
+    50% {
+        content: "|"
+    }
+
+    60% {
+        content: "Deve"
+    }
+
+    70% {
+        content: "Developer.|"
+    }
+
+    80% {
+        content: "|"
+    }
+
+    90% {
+        content: "Photographer.|"
+
+    }
+
+    100% {
+        content: "
+
+    }
+}
+
+/* home section end */
+
+/* navbar start */
+.navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.navbar-nav .nav-link.active {
+    position: relative;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.navbar>.container,
+.navbar>.container-fluid,
+.navbar>.container-lg,
+.navbar>.container-md,
+.navbar>.container-sm,
+.navbar>.container-xl,
+.navbar>.container-xxl {
+    text-align: center;
+}
+
+/* navbar end */
+
+/* abouts section start */
+
+#about .about-image::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    background-image: url(/img/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+#about p {
+    color: var(--secondaryColor);
+}
+
+.progress-bar {
+    background-color: #1c1c1c;
+
+}
+
+.progress {
+    height: 1.5rem;
+    background-color: #e9ecef;
+}
+
+.progress-bar::before {
+    content: attr(data-value);
+    position: absolute;
+    right: 1rem;
+}
+
+.progress-bar::after {
+    content: attr(data-name);
+    position: absolute;
+    left: 1rem;
+}
+
+/* SERVICES section starts */
+.section-title h5 {
+    position: relative;
+    z-index: 4;
+}
+
+.section-title h5::before {
+    content: "";
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/img/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+
+
+.services-content:hover .icon {
+    color: #f4f4f4;
+    background-color: var(--mainColor) !important;
+}
+
+/* PORTFOLIO section start */
+.nav-pills .nav-link {
+    color: var(--mainColor);
+}
+
+.nav-pills .nav-link.active {
+    background-color: transparent;
+    color: var(--mainColor);
+    position: relative;
+}
+
+.nav-pills .nav-link.active::after {
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: var(--mainColor);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.portfolio-image {
+    position: relative;
+
+}
+
+.img-layer h6 {
+    transform: translateY(-15px);
+    transition: all 0.7s;
+}
+
+.img-layer {
+    position: absolute;
+    top: 5px;
+    bottom: -5px;
+    left: 5px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.portfolio-image:hover .img-layer {
+    opacity: 1;
+    bottom: 5px;
+}
+
+.portfolio-image:hover h6 {
+    transform: translateY(0px)
+}
+
+.portfolio-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #111;
+    color: white;
+    transition: all 0.5s;
+}
+
+.portfolio-icon:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #111;
+}
+
+/* TESTOMINIAL section start */
+.carousel-indicators [data-bs-target] {
+    text-indent: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--secondaryColor);
+
+}
+
+/* BLOG start */
+.btn-card {
+    color: var(--mainColor)
+}
+
+.card-img img {
+    transition: all 0.5s;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.1);
+}
+
+/* CONTACT US START */
+.contact-content:hover .icon {
+    color: #f4f4f4;
+    background-color: var(--mainColor) !important;
+}
+
+.form-control {
+    background-color: #f4f4f4;
+    color: var(--secondaryColor);
+    border: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    background-color: #f4f4f4;
+}
